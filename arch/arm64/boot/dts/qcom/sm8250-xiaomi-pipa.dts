@@ -1045,6 +1045,10 @@
 	};
 };
 
+&i2c17 {
+	status = "okay";
+};
+
 &qup_spi4_cs_gpio {
 	drive-strength = <6>;
 	bias-disable;
