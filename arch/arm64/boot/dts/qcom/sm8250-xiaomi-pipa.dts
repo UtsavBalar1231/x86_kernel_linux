@@ -137,6 +137,26 @@
 			linux,can-disable;
 			wakeup-source;
 		};
+
+		event-hall-key0 {
+			label = "Magnetic cover mode";
+			gpios = <&tlmm 110 GPIO_ACTIVE_LOW>;
+			linux,input-type = <EV_SW>;
+			linux,code = <SW_LID>;
+			linux,can-disable;
+			wakeup-source;
+			debounce-interval = <300>;
+		};
+
+		event-hall-key1 {
+			label = "Tablet mode";
+			gpios = <&tlmm 121 GPIO_ACTIVE_LOW>;
+			linux,input-type = <EV_SW>;
+			linux,code = <SW_TABLET_MODE>;
+			linux,can-disable;
+			wakeup-source;
+			debounce-interval = <300>;
+		};
 	};
 
 	vph_pwr: vph-pwr-regulator {
